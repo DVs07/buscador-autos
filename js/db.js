@@ -1,174 +1,23 @@
 const autos = [
-	{
-		marca: 'BMW',
-		modelo: 'Serie 3',
-		year: 2020,
-		precio: 30000,
-		puertas: 4,
-		color: 'Blanco',
-		transmision: 'automatico'
-	},
-	{ 
-        marca: 'Audi', 
-        modelo: 'A4', 
-        year: 2020, 
-        precio: 40000, 
-        puertas: 4, 
-        color: 'Negro', 
-        transmision: 'automatico' 
-    },
-	{
-		marca: 'Ford',
-		modelo: 'Mustang',
-		year: 2015,
-		precio: 20000,
-		puertas: 2,
-		color: 'Blanco',
-		transmision: 'automatico'
-	},
-	{ 
-        marca: 'Audi', 
-        modelo: 'A6', 
-        year: 2020, 
-        precio: 35000, 
-        puertas: 4, 
-        color: 'Negro', 
-        transmision: 'automatico' 
-    },
-	{
-		marca: 'BMW',
-		modelo: 'Serie 5',
-		year: 2016,
-		precio: 70000,
-		puertas: 4,
-		color: 'Rojo',
-		transmision: 'automatico'
-	},
-	{
-		marca: 'Mercedes Benz',
-		modelo: 'Clase C',
-		year: 2015,
-		precio: 25000,
-		puertas: 4,
-		color: 'Blanco',
-		transmision: 'automatico'
-	},
-	{
-		marca: 'Chevrolet',
-		modelo: 'Camaro',
-		year: 2018,
-		precio: 60000,
-		puertas: 2,
-		color: 'Rojo',
-		transmision: 'manual'
-	},
-	{ 
-        marca: 'Ford', 
-        modelo: 'Mustang', 
-        year: 2019, 
-        precio: 80000, 
-        puertas: 2, 
-        color: 'Rojo', 
-        transmision: 'manual' 
-    },
-	{
-		marca: 'Dodge',
-		modelo: 'Challenger',
-		year: 2020,
-		precio: 40000,
-		puertas: 4,
-		color: 'Blanco',
-		transmision: 'automatico'
-	},
-	{ 
-        marca: 'Audi', 
-        modelo: 'A3', 
-        year: 2017, 
-        precio: 55000, 
-        puertas: 2, 
-        color: 'Negro', 
-        transmision: 
-        'manual' 
-    },
-	{
-		marca: 'Dodge',
-		modelo: 'Challenger',
-		year: 2020,
-		precio: 25000,
-		puertas: 2,
-		color: 'Rojo',
-		transmision: 'manual'
-	},
-	{
-		marca: 'Mercedes Benz',
-		modelo: 'Clase C',
-		year: 2018,
-		precio: 45000,
-		puertas: 4,
-		color: 'Azul',
-		transmision: 'automatico'
-	},
-	{
-		marca: 'BMW',
-		modelo: 'Serie 5',
-		year: 2019,
-		precio: 90000,
-		puertas: 4,
-		color: 'Blanco',
-		transmision: 'automatico'
-	},
-	{ 
-        marca: 'Ford', 
-        modelo: 'Mustang', 
-        year: 2017, 
-        precio: 60000, 
-        puertas: 2, 
-        color: 'Negro', 
-        transmision: 'manual' 
-    },
-	{
-		marca: 'Dodge',
-		modelo: 'Challenger',
-		year: 2015,
-		precio: 35000,
-		puertas: 2,
-		color: 'Azul',
-		transmision: 'automatico'
-	},
-	{
-		marca: 'BMW',
-		modelo: 'Serie 3',
-		year: 2018,
-		precio: 50000,
-		puertas: 4,
-		color: 'Blanco',
-		transmision: 'automatico'
-	},
-	{
-		marca: 'BMW',
-		modelo: 'Serie 5',
-		year: 2017,
-		precio: 80000,
-		puertas: 4,
-		color: 'Negro',
-		transmision: 'automatico'
-	},
-	{
-		marca: 'Mercedes Benz',
-		modelo: 'Clase C',
-		year: 2018,
-		precio: 40000,
-		puertas: 4,
-		color: 'Blanco',
-		transmision: 'automatico'
-	},
-	{ 
-        marca: 'Audi', 
-        modelo: 'A4', 
-        year: 2016, 
-        precio: 30000, 
-        puertas: 4, 
-        color: 'Azul', 
-        transmision: 'automatico' 
-    }
+	{ marca: 'Toyota', modelo: 'Corolla', year: 2024, precio: 25000, puertas: 4, transmision: 'Automática', color: 'Negro' },
+	{ marca: 'Honda', modelo: 'Civic', year: 2023, precio: 22000, puertas: 4, transmision: 'Manual', color: 'Blanco' },
+	{ marca: 'Ford', modelo: 'Focus', year: 2022, precio: 18000, puertas: 4, transmision: 'Automática', color: 'Azul' },
+	{ marca: 'Chevrolet', modelo: 'Camaro', year: 2021, precio: 40000, puertas: 2, transmision: 'Manual', color: 'Rojo' },
+	{ marca: 'Volkswagen', modelo: 'Golf', year: 2020, precio: 15000, puertas: 4, transmision: 'Automática', color: 'Gris' },
+	{ marca: 'Nissan', modelo: 'Sentra', year: 2019, precio: 17000, puertas: 4, transmision: 'Manual', color: 'Plata' },
+	{ marca: 'BMW', modelo: '320i', year: 2018, precio: 35000, puertas: 4, transmision: 'Automática', color: 'Negro' },
+	{ marca: 'Mercedes-Benz', modelo: 'C-Class', year: 2017, precio: 42000, puertas: 4, transmision: 'Manual', color: 'Blanco' },
+	{ marca: 'Audi', modelo: 'A4', year: 2016, precio: 32000, puertas: 4, transmision: 'Automática', color: 'Azul' },
+	{ marca: 'Hyundai', modelo: 'Elantra', year: 2015, precio: 20000, puertas: 4, transmision: 'Manual', color: 'Rojo' },
+	{ marca: 'Toyota', modelo: 'Yaris', year: 2014, precio: 22000, puertas: 4, transmision: 'Automática', color: 'Negro' },
+	{ marca: 'Honda', modelo: 'Accord', year: 2023, precio: 30000, puertas: 4, transmision: 'Manual', color: 'Blanco' },
+	{ marca: 'Ford', modelo: 'Fiesta', year: 2022, precio: 19000, puertas: 4, transmision: 'Automática', color: 'Azul' },
+	{ marca: 'Chevrolet', modelo: 'Malibu', year: 2021, precio: 35000, puertas: 4, transmision: 'Manual', color: 'Rojo' },
+	{ marca: 'Volkswagen', modelo: 'Jetta', year: 2020, precio: 18000, puertas: 4, transmision: 'Automática', color: 'Gris' },
+	{ marca: 'Nissan', modelo: 'Altima', year: 2019, precio: 25000, puertas: 4, transmision: 'Manual', color: 'Plata' },
+	{ marca: 'BMW', modelo: 'X3', year: 2018, precio: 45000, puertas: 4, transmision: 'Automática', color: 'Negro' },
+	{ marca: 'Mercedes-Benz', modelo: 'E-Class', year: 2017, precio: 50000, puertas: 4, transmision: 'Manual', color: 'Blanco' },
+	{ marca: 'Audi', modelo: 'Q5', year: 2016, precio: 38000, puertas: 4, transmision: 'Automática', color: 'Azul' },
+	{ marca: 'Hyundai', modelo: 'Sonata', year: 2015, precio: 23000, puertas: 4, transmision: 'Manual', color: 'Rojo' },
+	{ marca: 'Toyota', modelo: 'RAV4', year: 2014, precio: 28000, puertas: 4, transmision: 'Automática', color: 'Negro' }
 ];
