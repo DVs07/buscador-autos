@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(90, 213, 213);
+}
+.rationale-regular {
+    font-family: "Rationale", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.libre-barcode-128-text-regular {
+    font-family: "Libre Barcode 128 Text", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.anek-tamil-regular {
+font-family: "Anek Tamil", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-variation-settings:"wdth" 100;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.navbar{
+    background-color: #222;
+    color: white;
+    height: 45px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
