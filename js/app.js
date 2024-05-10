@@ -6,6 +6,7 @@ const precioMaximo = document.querySelector('#maximo');
 const puertas = document.querySelector('#puertas');
 const transmision = document.querySelector('#transmision');
 const color = document.querySelector('#color');
+const mensaje = document.querySelector('#no-resultado');
 
 // Contenedor para los resultados
 const resultado = document.querySelector('#resultado');
@@ -117,9 +118,13 @@ function filtrarAutos() {
     // console.log('funciona!!!');
     const resultado = autos.filter(filtrarMarca).filter(filtrarYear).filter(filtrarMinimo).filter(filtrarMaximo).filter(filtrarPuertas).filter(filtrarTrasmision).filter(filtrarColor);
     
-    // console.log(busqueda);
-    mostrarAutos(resultado);
-    console.log(resultado);
+    if (resultado.length) {
+
+        mostrarAutos(resultado);
+        // console.log(resultado);
+    } else{
+        noResultado();
+    }
 }
 
 function filtrarMarca(auto) {
@@ -179,4 +184,12 @@ function filtrarColor(auto) {
         return auto.color === color;
     }
     return auto;
+}
+
+function noResultado() {
+    limpiarHTML();
+    const noResultado = document.createElement('div');
+    noResultado.classList.add('alerta', 'error');
+    noResultado.textContent = 'No se encontraron resultados';
+    mensaje.appendChild(noResultado);
 }
