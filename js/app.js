@@ -1,6 +1,6 @@
 // Variables
 const marca = document.querySelector('#marca');
-const years = document.querySelector('#year');
+const year = document.querySelector('#year');
 const precioMinimo = document.querySelector('#minimo');
 const precioMaximo = document.querySelector('#maximo');
 const puertas = document.querySelector('#puertas');
@@ -27,7 +27,7 @@ const datosBusqueda = {
 
 // Eventos
 document.addEventListener('DOMContentLoaded', () => {
-    mostrarAutos(); // Muestra los autos al cargar
+    mostrarAutos(autos); // Muestra los autos al cargar
 
     // Llena las opciones de años
     llenarSelect();
@@ -39,10 +39,13 @@ marca.addEventListener('change', e => {
     datosBusqueda.marca = e.target.value;
 
     // console.log(datosBusqueda);
+
+    filtrarAutos();
 })
 
-years.addEventListener('change', e => {
+year.addEventListener('change', e => {
     datosBusqueda.year = parseInt(e.target.value);
+    filtrarAutos();
 })
 
 precioMinimo.addEventListener('change', e => {
@@ -65,7 +68,8 @@ color.addEventListener('change', e => {
     datosBusqueda.color = e.target.value;
 })
 // Funciones
-function mostrarAutos() {
+function mostrarAutos(autos) {
+    limpiarHTML();
     autos.forEach(auto => {
 
         const {marca, modelo, year, precio, puertas, transmision, color} = auto;
@@ -86,6 +90,12 @@ function mostrarAutos() {
     });
 }
 
+// Limpiar HTML
+function limpiarHTML() {
+    while (resultado.firstChild) {
+        resultado.removeChild(resultado.firstChild);
+    }
+}
 // Genera los años del select
 function llenarSelect() {
     // console.log('funciona');
@@ -93,6 +103,35 @@ function llenarSelect() {
         const yearHTML = document.createElement('option');
         yearHTML.value = i;
         yearHTML.textContent = i;
-        years.appendChild(yearHTML);
+        year.appendChild(yearHTML);
     }
+}
+
+// Funcion que filtra en base a la busqueda
+function filtrarAutos() {
+    // console.log('funciona!!!');
+    const resultado = autos.filter(filtrarMarca).filter(filtrarYear);
+    
+    // console.log(busqueda);
+    mostrarAutos(resultado);
+    console.log(resultado);
+}
+
+function filtrarMarca(auto) {
+    // console.log(auto.marca);
+    const { marca } = datosBusqueda;
+    if (marca) { // Si hay una marca
+        return auto.marca === marca; // Retorna el auto que cumpla la condicion
+    }
+    return auto; // Retorna todos los autos
+}
+
+function filtrarYear(auto) {
+    // console.log(typeof datosBusqueda.year);
+    // console.log(typeof auto.year);
+    const { year } = datosBusqueda;
+    if (year) {
+        return auto.year === parseInt(year);
+    }
+    return auto;
 }
