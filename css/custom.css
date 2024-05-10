@@ -33,3 +33,6 @@ font-variation-settings:"wdth" 100;
 .fz-2rem{
     font-size: 2rem;
 }
+form{
+    margin-bottom: 1rem !important;
+}
