@@ -15,7 +15,6 @@ const resultado = document.querySelector('#resultado');
 
 const max = new Date().getFullYear();
 const min = max - 10;
-// console.log(max, min);
 
 // Generar un objeto con la busqueda
 const datosBusqueda = {
@@ -44,8 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         selects.forEach(select => {
           select.selectedIndex = 0; // Establecer el índice seleccionado al valor predeterminado (primer elemento)
         });
-        
-        
         
         mostrarAutos(autos);
         
@@ -133,7 +130,6 @@ function limpiarHTML() {
 }
 // Genera los años del select
 function llenarSelect() {
-    // console.log('funciona');
     for (let i = max; i >= min; i--) {
         const yearHTML = document.createElement('option');
         yearHTML.value = i;
@@ -150,14 +146,13 @@ function filtrarAutos() {
     if (resultado.length) {
 
         mostrarAutos(resultado);
-        // console.log(resultado);
+
     } else{
         noResultado();
     }
 }
 
 function filtrarMarca(auto) {
-    // console.log(auto.marca);
     const { marca } = datosBusqueda;
     if (marca) { // Si hay una marca
         return auto.marca === marca; // Retorna el auto que cumpla la condicion
@@ -166,8 +161,6 @@ function filtrarMarca(auto) {
 }
 
 function filtrarYear(auto) {
-    // console.log(typeof datosBusqueda.year);
-    // console.log(typeof auto.year);
     const { year } = datosBusqueda;
     if (year) {
         return auto.year === parseInt(year);
