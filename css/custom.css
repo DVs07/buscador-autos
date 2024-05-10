@@ -36,3 +36,7 @@ font-variation-settings:"wdth" 100;
 form{
     margin-bottom: 1rem !important;
 }
+#resetear-btn:hover{
+    background-color: rgb(31 41 55);
+    color: white;
+}

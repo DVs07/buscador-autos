@@ -7,6 +7,8 @@ const puertas = document.querySelector('#puertas');
 const transmision = document.querySelector('#transmision');
 const color = document.querySelector('#color');
 const mensaje = document.querySelector('#no-resultado');
+const formulario = document.querySelector('#formulario');
+const resetearBtn = document.querySelector('#resetear-btn');
 
 // Contenedor para los resultados
 const resultado = document.querySelector('#resultado');
@@ -32,6 +34,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Llena las opciones de años
     llenarSelect();
+
+    // Resetea los selects
+    resetearBtn.addEventListener('click', () => {
+        // Obtener todos los elementos select dentro del formulario
+        const selects = formulario.querySelectorAll('select');
+        
+        // Iterar sobre los elementos select y restablecer su valor a la opción predeterminada
+        selects.forEach(select => {
+          select.selectedIndex = 0; // Establecer el índice seleccionado al valor predeterminado (primer elemento)
+        });
+        
+        
+        
+        mostrarAutos(autos);
+        
+        datosBusqueda.marca = '';
+        datosBusqueda.year = '';
+        datosBusqueda.minimo = '';
+        datosBusqueda.maximo = '';
+        datosBusqueda.puertas = '';
+        datosBusqueda.transmision = '';
+        datosBusqueda.color = '';
+
+        mensaje.removeChild(mensaje.lastChild);
+        // console.log(datosBusqueda);
+
+    });
 })
 
 // Eventos para los selects
@@ -189,7 +218,7 @@ function filtrarColor(auto) {
 function noResultado() {
     limpiarHTML();
     const noResultado = document.createElement('div');
-    noResultado.classList.add('alerta', 'error');
+    noResultado.classList.add('alerta', 'error', 'anek-tamil-regular');
     noResultado.textContent = 'No se encontraron resultados';
     mensaje.appendChild(noResultado);
 }
