@@ -40,3 +40,15 @@ form{
     background-color: rgb(31 41 55);
     color: white;
 }
+footer{
+    background-color: #13161a;
+    color: white;
+    padding: 5px;
+    position: relative;
+    margin-top: 20px;
+    bottom: 0;
+}
+footer>p{
+    margin-bottom: 0 !important;
+    font-size: 1.5rem;
+}
