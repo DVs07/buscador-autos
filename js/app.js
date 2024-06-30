@@ -34,31 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Llena las opciones de años
     llenarSelect();
 
-    // Resetea los selects
+    // Resetear formulario
     resetearBtn.addEventListener('click', () => {
-        // Obtener todos los elementos select dentro del formulario
-        // const selects = formulario.querySelectorAll('select');
-        
-        // // Iterar sobre los elementos select y restablecer su valor a la opción predeterminada
-        // selects.forEach(select => {
-        //   select.selectedIndex = 0; // Establecer el índice seleccionado al valor predeterminado (primer elemento)
-        // });
-        
-        // mostrarAutos(autos);
-        
-        // datosBusqueda.marca = '';
-        // datosBusqueda.year = '';
-        // datosBusqueda.minimo = '';
-        // datosBusqueda.maximo = '';
-        // datosBusqueda.puertas = '';
-        // datosBusqueda.transmision = '';
-        // datosBusqueda.color = '';
-
-        // mensaje.removeChild(mensaje.lastChild);
-        // // console.log(datosBusqueda);
 
         formulario.reset();
+        
         mostrarAutos(autos);
+
         datosBusqueda.marca = '';
         datosBusqueda.year = '';
         datosBusqueda.minimo = '';
